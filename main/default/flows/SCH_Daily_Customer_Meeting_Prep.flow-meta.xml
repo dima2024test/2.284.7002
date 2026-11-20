@@ -233,6 +233,9 @@
         <label>Dec Any Events</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_36_Event_Wrong_What_Type_a</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>No Meetings</defaultConnectorLabel>
         <rules>
             <name>Has_Events</name>
@@ -255,6 +258,9 @@
         <label>Dec Has New Tasks</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_36_Event_Wrong_What_Type_b</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>All Prepared</defaultConnectorLabel>
         <rules>
             <name>Has_New</name>
@@ -277,6 +283,9 @@
         <label>Dec Has Overdue</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_36_Event_Wrong_What_Type_c</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>All Current</defaultConnectorLabel>
         <rules>
             <name>Has_Overdue</name>
@@ -289,7 +298,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Send_Overdue_Warning</targetReference>
+                <targetReference>QA_ERR_36_Event_Wrong_What_Type_e</targetReference>
             </connector>
             <label>Has Overdue</label>
         </rules>
@@ -299,6 +308,9 @@
         <label>Dec Soonest Is Contact</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_36_Event_Wrong_What_Type_d</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Lead</defaultConnectorLabel>
         <rules>
             <name>Is_Contact</name>
@@ -396,6 +408,169 @@
         </faultConnector>
         <inputReference>colNewTasks</inputReference>
     </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_36_Event_Wrong_What_Type_a</name>
+        <label>QA ERR 36 Event Wrong What Type a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>DurationInMinutes</field>
+            <value>
+                <numberValue>30.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDateTime</field>
+            <value>
+                <dateTimeValue>2026-12-01T10:00:00.000Z</dateTimeValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-36</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <stringValue>00Q000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Event</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_36_Event_Wrong_What_Type_b</name>
+        <label>QA ERR 36 Event Wrong What Type b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>DurationInMinutes</field>
+            <value>
+                <numberValue>30.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDateTime</field>
+            <value>
+                <dateTimeValue>2026-12-01T10:00:00.000Z</dateTimeValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-36</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <stringValue>00Q000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Event</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_36_Event_Wrong_What_Type_c</name>
+        <label>QA ERR 36 Event Wrong What Type c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>DurationInMinutes</field>
+            <value>
+                <numberValue>30.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDateTime</field>
+            <value>
+                <dateTimeValue>2026-12-01T10:00:00.000Z</dateTimeValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-36</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <stringValue>00Q000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Event</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_36_Event_Wrong_What_Type_d</name>
+        <label>QA ERR 36 Event Wrong What Type d</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>DurationInMinutes</field>
+            <value>
+                <numberValue>30.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDateTime</field>
+            <value>
+                <dateTimeValue>2026-12-01T10:00:00.000Z</dateTimeValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-36</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <stringValue>00Q000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Event</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_36_Event_Wrong_What_Type_e</name>
+        <label>QA ERR 36 Event Wrong What Type e</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_Overdue_Warning</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>DurationInMinutes</field>
+            <value>
+                <numberValue>30.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDateTime</field>
+            <value>
+                <dateTimeValue>2026-12-01T10:00:00.000Z</dateTimeValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-36</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <stringValue>00Q000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Event</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
     <recordLookups>
         <name>Get_Recent_Prep_Tasks</name>
         <label>Get Recent Prep Tasks</label>
@@ -480,8 +655,8 @@
         </connector>
         <schedule>
             <frequency>Daily</frequency>
-            <startDate>2026-10-12</startDate>
-            <startTime>06:45:00.000Z</startTime>
+            <startDate>2026-11-20</startDate>
+            <startTime>10:33:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>

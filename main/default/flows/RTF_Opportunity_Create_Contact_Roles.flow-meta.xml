@@ -133,6 +133,9 @@
         <label>Dec Many Deals</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_47_OCR_Fake_Ids_d</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Normal Load</defaultConnectorLabel>
         <rules>
             <name>Many_Open_Deals</name>
@@ -169,6 +172,9 @@
                     <numberValue>0.0</numberValue>
                 </rightValue>
             </conditions>
+            <connector>
+                <targetReference>QA_ERR_47_OCR_Fake_Ids_e</targetReference>
+            </connector>
             <label>Has Roles</label>
         </rules>
     </decisions>
@@ -219,6 +225,9 @@
         <label>Create Capacity Task</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_47_OCR_Fake_Ids_a</targetReference>
+        </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -272,6 +281,9 @@
         <label>Create Contact Roles</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_47_OCR_Fake_Ids_b</targetReference>
+        </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -282,6 +294,9 @@
         <label>Create Role Review Task</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_47_OCR_Fake_Ids_c</targetReference>
+        </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -322,6 +337,106 @@
             </value>
         </inputAssignments>
         <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_47_OCR_Fake_Ids_a</name>
+        <label>QA ERR 47 OCR Fake Ids a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <stringValue>00Q000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OpportunityId</field>
+            <value>
+                <stringValue>006000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <object>OpportunityContactRole</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_47_OCR_Fake_Ids_b</name>
+        <label>QA ERR 47 OCR Fake Ids b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <stringValue>00Q000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OpportunityId</field>
+            <value>
+                <stringValue>006000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <object>OpportunityContactRole</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_47_OCR_Fake_Ids_c</name>
+        <label>QA ERR 47 OCR Fake Ids c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <stringValue>00Q000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OpportunityId</field>
+            <value>
+                <stringValue>006000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <object>OpportunityContactRole</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_47_OCR_Fake_Ids_d</name>
+        <label>QA ERR 47 OCR Fake Ids d</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <stringValue>00Q000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OpportunityId</field>
+            <value>
+                <stringValue>006000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <object>OpportunityContactRole</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_47_OCR_Fake_Ids_e</name>
+        <label>QA ERR 47 OCR Fake Ids e</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <stringValue>00Q000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OpportunityId</field>
+            <value>
+                <stringValue>006000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <object>OpportunityContactRole</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>

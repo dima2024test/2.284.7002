@@ -151,6 +151,9 @@
         <label>Dec Still Open</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_13_Case_Bad_Supplied_Email_b</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Handled</defaultConnectorLabel>
         <rules>
             <name>Still_Open</name>
@@ -194,7 +197,7 @@
             <targetReference>Asg_Append_Case</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Send_Escalation_Email</targetReference>
+            <targetReference>QA_ERR_13_Case_Bad_Supplied_Email_c</targetReference>
         </noMoreValuesConnector>
     </loops>
     <processMetadataValues>
@@ -271,6 +274,9 @@
         <label>Create SLA Breach Task</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_13_Case_Bad_Supplied_Email_a</targetReference>
+        </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -364,12 +370,52 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_13_Case_Bad_Supplied_Email</name>
-        <label>QA ERR 13 Case Bad Supplied Email</label>
+        <name>QA_ERR_13_Case_Bad_Supplied_Email_a</name>
+        <label>QA ERR 13 Case Bad Supplied Email a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-13</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SuppliedEmail</field>
+            <value>
+                <stringValue>qa-err-13 bad email</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_13_Case_Bad_Supplied_Email_b</name>
+        <label>QA ERR 13 Case Bad Supplied Email b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-13</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SuppliedEmail</field>
+            <value>
+                <stringValue>qa-err-13 bad email</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_13_Case_Bad_Supplied_Email_c</name>
+        <label>QA ERR 13 Case Bad Supplied Email c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Get_Contact</targetReference>
+            <targetReference>Send_Escalation_Email</targetReference>
         </connector>
         <inputAssignments>
             <field>Subject</field>
@@ -534,7 +580,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_13_Case_Bad_Supplied_Email</targetReference>
+            <targetReference>Get_Contact</targetReference>
         </connector>
         <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>and</filterLogic>

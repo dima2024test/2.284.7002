@@ -301,13 +301,10 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_17_Event_No_Time</name>
-        <label>QA ERR 17 Event No Time</label>
+        <name>QA_ERR_17_Event_No_Time_a</name>
+        <label>QA ERR 17 Event No Time a</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <connector>
-            <targetReference>Get_Recent_Logs</targetReference>
-        </connector>
         <inputAssignments>
             <field>Subject</field>
             <value>
@@ -322,6 +319,9 @@
         <label>Sub Log Error</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_17_Event_No_Time_a</targetReference>
+        </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -431,7 +431,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_17_Event_No_Time</targetReference>
+            <targetReference>Get_Recent_Logs</targetReference>
         </connector>
         <object>FlowExecutionErrorEvent</object>
         <triggerType>PlatformEvent</triggerType>

@@ -141,7 +141,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>Scr_Result</targetReference>
+            <targetReference>QA_ERR_32_Contact_Bad_ReportsTo_b</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No Tasks</defaultConnectorLabel>
         <rules>
@@ -191,7 +191,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>Scr_No_Contacts</targetReference>
+            <targetReference>QA_ERR_32_Contact_Bad_ReportsTo_a</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No Contacts</defaultConnectorLabel>
         <rules>
@@ -281,12 +281,58 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Scr_Result</targetReference>
+            <targetReference>QA_ERR_32_Contact_Bad_ReportsTo_b</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Sub_Log_Fault</targetReference>
         </faultConnector>
         <inputReference>colTasks</inputReference>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_32_Contact_Bad_ReportsTo_a</name>
+        <label>QA ERR 32 Contact Bad ReportsTo a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Scr_No_Contacts</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <stringValue>QA-ERR-32</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ReportsToId</field>
+            <value>
+                <stringValue>003000000000000AAB</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_32_Contact_Bad_ReportsTo_b</name>
+        <label>QA ERR 32 Contact Bad ReportsTo b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Scr_Result</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <stringValue>QA-ERR-32</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ReportsToId</field>
+            <value>
+                <stringValue>003000000000000AAB</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
         <name>Get_Account_Contacts</name>

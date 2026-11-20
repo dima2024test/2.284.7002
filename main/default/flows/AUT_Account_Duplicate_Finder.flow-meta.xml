@@ -75,6 +75,9 @@
                 <booleanValue>true</booleanValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_58_Account_Fake_Parent_a</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Not_Found</name>
@@ -95,6 +98,9 @@
                 <booleanValue>false</booleanValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_58_Account_Fake_Parent_b</targetReference>
+        </connector>
     </assignments>
     <collectionProcessors>
         <name>Filter_New_Phone_Matches</name>
@@ -147,6 +153,9 @@
         <label>Dec Any Duplicates</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_58_Account_Fake_Parent_c</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Clean</defaultConnectorLabel>
         <rules>
             <name>Duplicates_Found</name>
@@ -251,6 +260,66 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>QA_ERR_58_Account_Fake_Parent_a</name>
+        <label>QA ERR 58 Account Fake Parent a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-58</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <stringValue>001000000000000AAB</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_58_Account_Fake_Parent_b</name>
+        <label>QA ERR 58 Account Fake Parent b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-58</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <stringValue>001000000000000AAB</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_58_Account_Fake_Parent_c</name>
+        <label>QA ERR 58 Account Fake Parent c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-58</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <stringValue>001000000000000AAB</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
     <recordLookups>
         <name>Get_Account</name>
         <label>Get Account</label>

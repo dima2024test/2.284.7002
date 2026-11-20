@@ -47,6 +47,9 @@
                 <stringValue>FOLLOWED_UP</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_16_Event_Too_Long_a</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Escalated</name>
@@ -60,6 +63,9 @@
                 <stringValue>ESCALATED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_16_Event_Too_Long_b</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Open_Count</name>
@@ -112,6 +118,9 @@
                 <stringValue>SKIPPED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_16_Event_Too_Long_c</targetReference>
+        </connector>
     </assignments>
     <decisions>
         <name>Dec_Any_Open</name>
@@ -242,6 +251,84 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>QA_ERR_16_Event_Too_Long_a</name>
+        <label>QA ERR 16 Event Too Long a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>DurationInMinutes</field>
+            <value>
+                <numberValue>30000.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDateTime</field>
+            <value>
+                <dateTimeValue>2026-12-01T10:00:00.000Z</dateTimeValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-16</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Event</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_16_Event_Too_Long_b</name>
+        <label>QA ERR 16 Event Too Long b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>DurationInMinutes</field>
+            <value>
+                <numberValue>30000.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDateTime</field>
+            <value>
+                <dateTimeValue>2026-12-01T10:00:00.000Z</dateTimeValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-16</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Event</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_16_Event_Too_Long_c</name>
+        <label>QA ERR 16 Event Too Long c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>DurationInMinutes</field>
+            <value>
+                <numberValue>30000.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDateTime</field>
+            <value>
+                <dateTimeValue>2026-12-01T10:00:00.000Z</dateTimeValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-16</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Event</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
     <recordLookups>
         <name>Get_Event</name>
         <label>Get Event</label>

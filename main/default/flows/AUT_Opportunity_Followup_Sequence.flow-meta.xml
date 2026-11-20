@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <name>QA_ERR_28_Email_Invalid_Address</name>
-        <label>QA ERR 28 Email Invalid Address</label>
+        <name>QA_ERR_28_Email_Invalid_Address_a</name>
+        <label>QA ERR 28 Email Invalid Address a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>qa-err-28-not-an-address</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>[QA-ERR-28] invalid recipient</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>QA-ERR-28</stringValue>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>QA_ERR_28_Email_Invalid_Address_b</name>
+        <label>QA ERR 28 Email Invalid Address b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>qa-err-28-not-an-address</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>[QA-ERR-28] invalid recipient</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>QA-ERR-28</stringValue>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>QA_ERR_28_Email_Invalid_Address_c</name>
+        <label>QA ERR 28 Email Invalid Address c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
         <connector>
-            <targetReference>Get_Opportunity</targetReference>
+            <targetReference>Send_Owner_Email</targetReference>
         </connector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
@@ -91,6 +147,9 @@
                 <stringValue>CLOSED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_28_Email_Invalid_Address_a</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Progressed</name>
@@ -104,6 +163,9 @@
                 <stringValue>PROGRESSED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_28_Email_Invalid_Address_b</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Raise_Priority</name>
@@ -482,7 +544,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Send_Owner_Email</targetReference>
+            <targetReference>QA_ERR_28_Email_Invalid_Address_c</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
@@ -493,7 +555,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_28_Email_Invalid_Address</targetReference>
+            <targetReference>Get_Opportunity</targetReference>
         </connector>
     </start>
     <status>Active</status>

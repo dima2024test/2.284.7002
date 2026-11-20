@@ -112,6 +112,9 @@
                 <stringValue>COMPLETED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_56_Case_Wrong_Contact_Type_a</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Open_Count</name>
@@ -141,6 +144,9 @@
                 <stringValue>REMINDED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_56_Case_Wrong_Contact_Type_b</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Skipped</name>
@@ -154,6 +160,9 @@
                 <stringValue>SKIPPED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_56_Case_Wrong_Contact_Type_c</targetReference>
+        </connector>
     </assignments>
     <decisions>
         <name>Dec_Any_Open</name>
@@ -301,6 +310,66 @@
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
         <inputReference>colNewTasks</inputReference>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_56_Case_Wrong_Contact_Type_a</name>
+        <label>QA ERR 56 Case Wrong Contact Type a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <stringValue>001000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-56</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_56_Case_Wrong_Contact_Type_b</name>
+        <label>QA ERR 56 Case Wrong Contact Type b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <stringValue>001000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-56</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_56_Case_Wrong_Contact_Type_c</name>
+        <label>QA ERR 56 Case Wrong Contact Type c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <stringValue>001000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-56</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
         <name>Get_Contact_Roles</name>

@@ -53,6 +53,9 @@
         <label>Dec Account Clear</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_33_Case_Fake_Parent_b</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Cases Remain</defaultConnectorLabel>
         <rules>
             <name>All_Clear</name>
@@ -75,6 +78,9 @@
         <label>Dec Contact For Snapshot</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_33_Case_Fake_Parent_c</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>No Contact</defaultConnectorLabel>
         <rules>
             <name>Contact_Present</name>
@@ -97,6 +103,9 @@
         <label>Dec Has Account</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_33_Case_Fake_Parent_d</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>No Account</defaultConnectorLabel>
         <rules>
             <name>Has_Account</name>
@@ -197,7 +206,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Send_Closure_Email</targetReference>
+            <targetReference>QA_ERR_33_Case_Fake_Parent_e</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
@@ -246,6 +255,9 @@
         <label>Create Reopen Task</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_33_Case_Fake_Parent_a</targetReference>
+        </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -330,6 +342,129 @@
             </value>
         </inputAssignments>
         <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_33_Case_Fake_Parent_a</name>
+        <label>QA ERR 33 Case Fake Parent a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <stringValue>500000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-33</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_33_Case_Fake_Parent_b</name>
+        <label>QA ERR 33 Case Fake Parent b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <stringValue>500000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-33</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_33_Case_Fake_Parent_c</name>
+        <label>QA ERR 33 Case Fake Parent c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <stringValue>500000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-33</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_33_Case_Fake_Parent_d</name>
+        <label>QA ERR 33 Case Fake Parent d</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <stringValue>500000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-33</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_33_Case_Fake_Parent_e</name>
+        <label>QA ERR 33 Case Fake Parent e</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_Closure_Email</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <stringValue>500000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-33</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_33_Case_Fake_Parent_f</name>
+        <label>QA ERR 33 Case Fake Parent f</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <stringValue>500000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-33</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
@@ -478,6 +613,9 @@
         <label>Sub Contact Snapshot</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_33_Case_Fake_Parent_f</targetReference>
+        </connector>
         <flowName>AUT_Contact_Activity_Snapshot</flowName>
         <inputAssignments>
             <name>inContactId</name>

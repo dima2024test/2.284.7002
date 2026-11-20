@@ -274,41 +274,6 @@
         <object>Task</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
-    <recordCreates>
-        <name>QA_ERR_11_Opportunity_Probability_Overflow</name>
-        <label>QA ERR 11 Opportunity Probability Overflow</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <connector>
-            <targetReference>Dec_What_Changed</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>CloseDate</field>
-            <value>
-                <dateValue>2026-12-31</dateValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Name</field>
-            <value>
-                <stringValue>QA-ERR-11</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Probability</field>
-            <value>
-                <numberValue>5000.0</numberValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>StageName</field>
-            <value>
-                <stringValue>Prospecting</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Opportunity</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
     <recordLookups>
         <name>Get_Line_Items</name>
         <label>Get Line Items</label>
@@ -337,7 +302,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_11_Opportunity_Probability_Overflow</targetReference>
+            <targetReference>Dec_What_Changed</targetReference>
         </connector>
         <filterLogic>1 AND (2 OR 3)</filterLogic>
         <filters>

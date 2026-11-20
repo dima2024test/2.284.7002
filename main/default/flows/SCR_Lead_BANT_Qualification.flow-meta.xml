@@ -100,22 +100,6 @@
             <targetReference>Update_Lead</targetReference>
         </connector>
     </assignments>
-    <assignments>
-        <name>QA_ERR_29_Prepare_Lead_No_Id</name>
-        <label>QA ERR 29 Prepare Lead No Id</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>varQaErr29Lead.LastName</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>QA-ERR-29</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>QA_ERR_29_Update_Lead_No_Id</targetReference>
-        </connector>
-    </assignments>
     <choices>
         <name>chAuthDecider</name>
         <choiceText>Decision maker</choiceText>
@@ -501,16 +485,6 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <name>QA_ERR_29_Update_Lead_No_Id</name>
-        <label>QA ERR 29 Update Lead No Id</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <connector>
-            <targetReference>Scr_Select_Lead</targetReference>
-        </connector>
-        <inputReference>varQaErr29Lead</inputReference>
-    </recordUpdates>
-    <recordUpdates>
         <name>Update_Lead</name>
         <label>Update Lead</label>
         <locationX>0</locationX>
@@ -715,7 +689,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_29_Prepare_Lead_No_Id</targetReference>
+            <targetReference>Scr_Select_Lead</targetReference>
         </connector>
     </start>
     <status>Active</status>
@@ -767,14 +741,6 @@ Notes: {!Bant_Notes}</text>
         <name>colSiblings</name>
         <dataType>SObject</dataType>
         <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <objectType>Lead</objectType>
-    </variables>
-    <variables>
-        <name>varQaErr29Lead</name>
-        <dataType>SObject</dataType>
-        <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>Lead</objectType>

@@ -370,35 +370,6 @@
         <object>Task</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
-    <recordCreates>
-        <name>QA_ERR_09_Lead_Bad_Email</name>
-        <label>QA ERR 09 Lead Bad Email</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <connector>
-            <targetReference>Get_Open_Lead_Tasks</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Company</field>
-            <value>
-                <stringValue>QA-ERR-09</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Email</field>
-            <value>
-                <stringValue>qa-err-09@@bad</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>LastName</field>
-            <value>
-                <stringValue>QA-ERR-09</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Lead</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
     <recordLookups>
         <name>Get_Lead_Later</name>
         <label>Get Lead Later</label>
@@ -502,7 +473,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_09_Lead_Bad_Email</targetReference>
+            <targetReference>Get_Open_Lead_Tasks</targetReference>
         </connector>
         <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>and</filterLogic>

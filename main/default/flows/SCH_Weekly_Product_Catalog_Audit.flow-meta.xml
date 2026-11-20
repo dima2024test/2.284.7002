@@ -201,6 +201,9 @@
         <label>Dec Gaps Found</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_22_Product_No_Name_a</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Catalog Clean</defaultConnectorLabel>
         <rules>
             <name>Gaps</name>
@@ -220,7 +223,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Send_Audit_Email</targetReference>
+                <targetReference>QA_ERR_22_Product_No_Name_b</targetReference>
             </connector>
             <label>Gaps</label>
         </rules>
@@ -322,12 +325,26 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_22_Product_No_Name</name>
-        <label>QA ERR 22 Product No Name</label>
+        <name>QA_ERR_22_Product_No_Name_a</name>
+        <label>QA ERR 22 Product No Name a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>QA-ERR-22</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Product2</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_22_Product_No_Name_b</name>
+        <label>QA ERR 22 Product No Name b</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Get_Active_Products</targetReference>
+            <targetReference>Send_Audit_Email</targetReference>
         </connector>
         <inputAssignments>
             <field>Description</field>
@@ -368,12 +385,12 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_22_Product_No_Name</targetReference>
+            <targetReference>Get_Active_Products</targetReference>
         </connector>
         <schedule>
             <frequency>Weekly</frequency>
             <startDate>2026-11-20</startDate>
-            <startTime>12:45:00.000Z</startTime>
+            <startTime>10:24:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>

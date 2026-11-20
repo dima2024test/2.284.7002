@@ -60,7 +60,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>Scr_Result</targetReference>
+            <targetReference>QA_ERR_43_Product_Name_Too_Long_b</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Nothing Changed</defaultConnectorLabel>
         <rules>
@@ -85,7 +85,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>Scr_No_Opportunities</targetReference>
+            <targetReference>QA_ERR_43_Product_Name_Too_Long_a</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>None</defaultConnectorLabel>
         <rules>
@@ -210,7 +210,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Scr_Result</targetReference>
+            <targetReference>QA_ERR_43_Product_Name_Too_Long_b</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Sub_Log_Fault</targetReference>
@@ -255,26 +255,37 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_04_Account_Revenue_Overflow</name>
-        <label>QA ERR 04 Account Revenue Overflow</label>
+        <name>QA_ERR_43_Product_Name_Too_Long_a</name>
+        <label>QA ERR 43 Product Name Too Long a</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Scr_Select_Account</targetReference>
+            <targetReference>Scr_No_Opportunities</targetReference>
         </connector>
-        <inputAssignments>
-            <field>AnnualRevenue</field>
-            <value>
-                <numberValue>1.0E20</numberValue>
-            </value>
-        </inputAssignments>
         <inputAssignments>
             <field>Name</field>
             <value>
-                <stringValue>QA-ERR-04</stringValue>
+                <stringValue>QA-ERR-43 too long XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</stringValue>
             </value>
         </inputAssignments>
-        <object>Account</object>
+        <object>Product2</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_43_Product_Name_Too_Long_b</name>
+        <label>QA ERR 43 Product Name Too Long b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Scr_Result</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-43 too long XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Product2</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
@@ -434,7 +445,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_04_Account_Revenue_Overflow</targetReference>
+            <targetReference>Scr_Select_Account</targetReference>
         </connector>
     </start>
     <status>Active</status>

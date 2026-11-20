@@ -101,6 +101,9 @@
         <label>Dec Admin Found</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_24_User_Missing_Fields_a</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>No Admin</defaultConnectorLabel>
         <rules>
             <name>Found</name>
@@ -123,6 +126,9 @@
         <label>Dec Any Users</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_24_User_Missing_Fields_b</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>No Deactivations</defaultConnectorLabel>
         <rules>
             <name>Has_Users</name>
@@ -145,6 +151,9 @@
         <label>Dec Anything Processed</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_24_User_Missing_Fields_c</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Nothing</defaultConnectorLabel>
         <rules>
             <name>Processed</name>
@@ -215,7 +224,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Send_Handover_Email</targetReference>
+            <targetReference>QA_ERR_24_User_Missing_Fields_d</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
@@ -257,6 +266,65 @@
             </value>
         </inputAssignments>
         <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_24_User_Missing_Fields_a</name>
+        <label>QA ERR 24 User Missing Fields a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <stringValue>QA-ERR-24</stringValue>
+            </value>
+        </inputAssignments>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_24_User_Missing_Fields_b</name>
+        <label>QA ERR 24 User Missing Fields b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <stringValue>QA-ERR-24</stringValue>
+            </value>
+        </inputAssignments>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_24_User_Missing_Fields_c</name>
+        <label>QA ERR 24 User Missing Fields c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <stringValue>QA-ERR-24</stringValue>
+            </value>
+        </inputAssignments>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_24_User_Missing_Fields_d</name>
+        <label>QA ERR 24 User Missing Fields d</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_Handover_Email</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <stringValue>QA-ERR-24</stringValue>
+            </value>
+        </inputAssignments>
+        <object>User</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
@@ -396,8 +464,8 @@
         </connector>
         <schedule>
             <frequency>Weekly</frequency>
-            <startDate>2026-10-12</startDate>
-            <startTime>23:30:00.000Z</startTime>
+            <startDate>2026-11-20</startDate>
+            <startTime>10:36:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>

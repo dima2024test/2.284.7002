@@ -266,29 +266,6 @@
         <object>Task</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
-    <recordCreates>
-        <name>QA_ERR_07_Contact_Wrong_Account_Type</name>
-        <label>QA ERR 07 Contact Wrong Account Type</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <connector>
-            <targetReference>Dec_Email_Changed</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>AccountId</field>
-            <value>
-                <stringValue>00Q000000000000AAA</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>LastName</field>
-            <value>
-                <stringValue>QA-ERR-07</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Contact</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
     <recordLookups>
         <name>Get_Open_Cases</name>
         <label>Get Open Cases</label>
@@ -337,7 +314,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_07_Contact_Wrong_Account_Type</targetReference>
+            <targetReference>Dec_Email_Changed</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>

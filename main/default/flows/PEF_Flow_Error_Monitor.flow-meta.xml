@@ -323,13 +323,10 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_01_Account_Invalid_Owner</name>
-        <label>QA ERR 01 Account Invalid Owner</label>
+        <name>QA_ERR_01_Account_Invalid_Owner_a</name>
+        <label>QA ERR 01 Account Invalid Owner a</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <connector>
-            <targetReference>Get_Interview_User</targetReference>
-        </connector>
         <inputAssignments>
             <field>Name</field>
             <value>
@@ -350,6 +347,9 @@
         <label>Sub Log Flow Error</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_01_Account_Invalid_Owner_a</targetReference>
+        </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -458,7 +458,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_01_Account_Invalid_Owner</targetReference>
+            <targetReference>Get_Interview_User</targetReference>
         </connector>
         <object>FlowExecutionErrorEvent</object>
         <triggerType>PlatformEvent</triggerType>

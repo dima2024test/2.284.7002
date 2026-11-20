@@ -7,7 +7,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>Scr_Not_Found</targetReference>
+            <targetReference>QA_ERR_54_Contact_LastName_Too_Long_b</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Not Found</defaultConnectorLabel>
         <rules>
@@ -32,7 +32,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>Scr_Done</targetReference>
+            <targetReference>QA_ERR_54_Contact_LastName_Too_Long_a</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Same Email</defaultConnectorLabel>
         <rules>
@@ -107,7 +107,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Scr_Done</targetReference>
+            <targetReference>QA_ERR_54_Contact_LastName_Too_Long_a</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Sub_Log_Fault</targetReference>
@@ -152,23 +152,34 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_06_Contact_Bad_Email</name>
-        <label>QA ERR 06 Contact Bad Email</label>
+        <name>QA_ERR_54_Contact_LastName_Too_Long_a</name>
+        <label>QA ERR 54 Contact LastName Too Long a</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Scr_Select_Account</targetReference>
+            <targetReference>Scr_Done</targetReference>
         </connector>
-        <inputAssignments>
-            <field>Email</field>
-            <value>
-                <stringValue>qa-err-06-not-an-email</stringValue>
-            </value>
-        </inputAssignments>
         <inputAssignments>
             <field>LastName</field>
             <value>
-                <stringValue>QA-ERR-06</stringValue>
+                <stringValue>QA-ERR-54 too long XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_54_Contact_LastName_Too_Long_b</name>
+        <label>QA ERR 54 Contact LastName Too Long b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Scr_Not_Found</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <stringValue>QA-ERR-54 too long XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</stringValue>
             </value>
         </inputAssignments>
         <object>Contact</object>
@@ -382,7 +393,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_06_Contact_Bad_Email</targetReference>
+            <targetReference>Scr_Select_Account</targetReference>
         </connector>
     </start>
     <status>Active</status>
