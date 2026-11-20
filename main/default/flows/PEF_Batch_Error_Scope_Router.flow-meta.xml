@@ -318,6 +318,9 @@
         <label>Sub Log Error</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_60_Delete_Account_Bad_Id_Filter_a</targetReference>
+        </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -354,6 +357,21 @@
         <object>Task</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
+    <recordDeletes>
+        <name>QA_ERR_60_Delete_Account_Bad_Id_Filter_a</name>
+        <label>QA ERR 60 Delete Account Bad Id Filter a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>QA-ERR-60-bad</stringValue>
+            </value>
+        </filters>
+        <object>Account</object>
+    </recordDeletes>
     <recordLookups>
         <name>Get_Account</name>
         <label>Get Account</label>

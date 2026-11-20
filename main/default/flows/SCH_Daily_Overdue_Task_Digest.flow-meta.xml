@@ -102,8 +102,8 @@
         </connector>
     </assignments>
     <assignments>
-        <name>QA_ERR_27_Prepare_Fake_Task</name>
-        <label>QA ERR 27 Prepare Fake Task</label>
+        <name>QA_PREP_27_Delete_Fake_Task_a</name>
+        <label>QA PREP 27 Delete Fake Task a</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
@@ -114,7 +114,23 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>QA_ERR_27_Delete_Fake_Task</targetReference>
+            <targetReference>QA_ERR_27_Delete_Fake_Task_a</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>QA_PREP_27_Delete_Fake_Task_b</name>
+        <label>QA PREP 27 Delete Fake Task b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>varQaErr27Task.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>00T000000000000AAA</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_27_Delete_Fake_Task_b</targetReference>
         </connector>
     </assignments>
     <collectionProcessors>
@@ -140,6 +156,9 @@
         <label>Dec Any Overdue</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_27_Delete_Fake_Task_a</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Nothing Overdue</defaultConnectorLabel>
         <rules>
             <name>Has_Overdue</name>
@@ -267,7 +286,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Send_Digest_Email</targetReference>
+            <targetReference>QA_ERR_27_Delete_Fake_Task_b</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
@@ -306,12 +325,19 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordDeletes>
-        <name>QA_ERR_27_Delete_Fake_Task</name>
-        <label>QA ERR 27 Delete Fake Task</label>
+        <name>QA_ERR_27_Delete_Fake_Task_a</name>
+        <label>QA ERR 27 Delete Fake Task a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputReference>varQaErr27Task</inputReference>
+    </recordDeletes>
+    <recordDeletes>
+        <name>QA_ERR_27_Delete_Fake_Task_b</name>
+        <label>QA ERR 27 Delete Fake Task b</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Get_Overdue_Tasks</targetReference>
+            <targetReference>Send_Digest_Email</targetReference>
         </connector>
         <inputReference>varQaErr27Task</inputReference>
     </recordDeletes>
@@ -363,12 +389,12 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_27_Prepare_Fake_Task</targetReference>
+            <targetReference>Get_Overdue_Tasks</targetReference>
         </connector>
         <schedule>
             <frequency>Daily</frequency>
             <startDate>2026-11-20</startDate>
-            <startTime>12:35:00.000Z</startTime>
+            <startTime>10:18:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>

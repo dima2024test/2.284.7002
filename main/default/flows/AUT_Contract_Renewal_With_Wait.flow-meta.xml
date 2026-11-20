@@ -60,6 +60,9 @@
                 <stringValue>RENEWAL_CLOSED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_10_Opportunity_No_CloseDate_a</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Skipped</name>
@@ -73,6 +76,9 @@
                 <stringValue>SKIPPED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_10_Opportunity_No_CloseDate_b</targetReference>
+        </connector>
     </assignments>
     <decisions>
         <name>Dec_Contract_Valid</name>
@@ -229,7 +235,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Send_Escalation_Email</targetReference>
+            <targetReference>QA_ERR_10_Opportunity_No_CloseDate_c</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
@@ -324,12 +330,52 @@
         <object>Opportunity</object>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_10_Opportunity_No_CloseDate</name>
-        <label>QA ERR 10 Opportunity No CloseDate</label>
+        <name>QA_ERR_10_Opportunity_No_CloseDate_a</name>
+        <label>QA ERR 10 Opportunity No CloseDate a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-10</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>Prospecting</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_10_Opportunity_No_CloseDate_b</name>
+        <label>QA ERR 10 Opportunity No CloseDate b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-10</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>Prospecting</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_10_Opportunity_No_CloseDate_c</name>
+        <label>QA ERR 10 Opportunity No CloseDate c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Get_Contract</targetReference>
+            <targetReference>Send_Escalation_Email</targetReference>
         </connector>
         <inputAssignments>
             <field>Name</field>
@@ -453,7 +499,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_10_Opportunity_No_CloseDate</targetReference>
+            <targetReference>Get_Contract</targetReference>
         </connector>
     </start>
     <status>Active</status>

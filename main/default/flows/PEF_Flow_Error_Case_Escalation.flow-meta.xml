@@ -276,7 +276,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Send_Notification_Email</targetReference>
+            <targetReference>QA_ERR_02_Account_No_Name_a</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
@@ -353,13 +353,27 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_02_Account_No_Name</name>
-        <label>QA ERR 02 Account No Name</label>
+        <name>QA_ERR_02_Account_No_Name_a</name>
+        <label>QA ERR 02 Account No Name a</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Dec_Flow_Category</targetReference>
+            <targetReference>Send_Notification_Email</targetReference>
         </connector>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>QA-ERR-02</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_02_Account_No_Name_b</name>
+        <label>QA ERR 02 Account No Name b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <inputAssignments>
             <field>Description</field>
             <value>
@@ -464,6 +478,9 @@
         <label>Update Existing Case</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_02_Account_No_Name_b</targetReference>
+        </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -493,7 +510,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_02_Account_No_Name</targetReference>
+            <targetReference>Dec_Flow_Category</targetReference>
         </connector>
         <object>FlowExecutionErrorEvent</object>
         <triggerType>PlatformEvent</triggerType>

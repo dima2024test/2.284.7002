@@ -92,6 +92,9 @@
                 <numberValue>0.0</numberValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_08_Lead_No_Company_a</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Owner_Input</name>
@@ -189,6 +192,9 @@
         <label>Dec Notify</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_08_Lead_No_Company_b</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>No Notification</defaultConnectorLabel>
         <rules>
             <name>Notify</name>
@@ -208,7 +214,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Send_Summary_Email</targetReference>
+                <targetReference>QA_ERR_08_Lead_No_Company_c</targetReference>
             </connector>
             <label>Notify</label>
         </rules>
@@ -328,12 +334,40 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordCreates>
-        <name>QA_ERR_08_Lead_No_Company</name>
-        <label>QA ERR 08 Lead No Company</label>
+        <name>QA_ERR_08_Lead_No_Company_a</name>
+        <label>QA ERR 08 Lead No Company a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <stringValue>QA-ERR-08</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_08_Lead_No_Company_b</name>
+        <label>QA ERR 08 Lead No Company b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <stringValue>QA-ERR-08</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_08_Lead_No_Company_c</name>
+        <label>QA ERR 08 Lead No Company c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Dec_Owner_Provided</targetReference>
+            <targetReference>Send_Summary_Email</targetReference>
         </connector>
         <inputAssignments>
             <field>LastName</field>
@@ -388,7 +422,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_08_Lead_No_Company</targetReference>
+            <targetReference>Dec_Owner_Provided</targetReference>
         </connector>
     </start>
     <status>Active</status>

@@ -64,7 +64,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>Scr_Cancelled</targetReference>
+            <targetReference>QA_ERR_31_Account_Website_Too_Long_a</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Cancel</defaultConnectorLabel>
         <rules>
@@ -110,7 +110,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Scr_Invalid</targetReference>
+                <targetReference>QA_ERR_31_Account_Website_Too_Long_c</targetReference>
             </connector>
             <label>Invalid</label>
         </rules>
@@ -221,7 +221,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Scr_Confirmation</targetReference>
+            <targetReference>QA_ERR_31_Account_Website_Too_Long_b</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Sub_Log_Fault</targetReference>
@@ -266,32 +266,72 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_16_Event_Too_Long</name>
-        <label>QA ERR 16 Event Too Long</label>
+        <name>QA_ERR_31_Account_Website_Too_Long_a</name>
+        <label>QA ERR 31 Account Website Too Long a</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Scr_Meeting_Details</targetReference>
+            <targetReference>Scr_Cancelled</targetReference>
         </connector>
         <inputAssignments>
-            <field>DurationInMinutes</field>
+            <field>Name</field>
             <value>
-                <numberValue>30000.0</numberValue>
+                <stringValue>QA-ERR-31</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>StartDateTime</field>
+            <field>Website</field>
             <value>
-                <dateTimeValue>2026-12-01T10:00:00.000Z</dateTimeValue>
+                <stringValue>QA-ERR-31 too long XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_31_Account_Website_Too_Long_b</name>
+        <label>QA ERR 31 Account Website Too Long b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Scr_Confirmation</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-31</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Subject</field>
+            <field>Website</field>
             <value>
-                <stringValue>QA-ERR-16</stringValue>
+                <stringValue>QA-ERR-31 too long XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</stringValue>
             </value>
         </inputAssignments>
-        <object>Event</object>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_31_Account_Website_Too_Long_c</name>
+        <label>QA ERR 31 Account Website Too Long c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Scr_Invalid</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-31</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Website</field>
+            <value>
+                <stringValue>QA-ERR-31 too long XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
@@ -500,7 +540,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_16_Event_Too_Long</targetReference>
+            <targetReference>Scr_Meeting_Details</targetReference>
         </connector>
     </start>
     <status>Active</status>

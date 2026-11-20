@@ -135,6 +135,9 @@
         <label>Dec Repeated</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_14_Task_Wrong_Who_Type_a</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>First Times</defaultConnectorLabel>
         <rules>
             <name>Repeated</name>
@@ -147,7 +150,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Send_Repeat_Email</targetReference>
+                <targetReference>QA_ERR_14_Task_Wrong_Who_Type_c</targetReference>
             </connector>
             <label>Repeated</label>
         </rules>
@@ -157,6 +160,9 @@
         <label>Dec User Active</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_14_Task_Wrong_Who_Type_b</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Inactive</defaultConnectorLabel>
         <rules>
             <name>Active</name>
@@ -301,12 +307,52 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_14_Task_Wrong_Who_Type</name>
-        <label>QA ERR 14 Task Wrong Who Type</label>
+        <name>QA_ERR_14_Task_Wrong_Who_Type_a</name>
+        <label>QA ERR 14 Task Wrong Who Type a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-14</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <stringValue>001000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_14_Task_Wrong_Who_Type_b</name>
+        <label>QA ERR 14 Task Wrong Who Type b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-14</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <stringValue>001000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_14_Task_Wrong_Who_Type_c</name>
+        <label>QA ERR 14 Task Wrong Who Type c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Get_User</targetReference>
+            <targetReference>Send_Repeat_Email</targetReference>
         </connector>
         <inputAssignments>
             <field>Subject</field>
@@ -420,7 +466,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_14_Task_Wrong_Who_Type</targetReference>
+            <targetReference>Get_User</targetReference>
         </connector>
         <object>FlowExecutionErrorEvent</object>
         <triggerType>PlatformEvent</triggerType>

@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>NCase</name>
+        <label>NCase</label>
+        <locationX>1964</locationX>
+        <locationY>600</locationY>
+        <actionName>NewCase</actionName>
+        <actionType>quickAction</actionType>
+        <connector>
+            <targetReference>createopp</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>Status</name>
+            <value>
+                <stringValue>New</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Description</name>
+            <value>
+                <stringValue>test</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
     <apiVersion>62.0</apiVersion>
     <assignments>
         <name>Asg_Add_Value</name>
         <label>Asg Add Value</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
+        <locationX>402</locationX>
+        <locationY>708</locationY>
         <assignmentItems>
             <assignToReference>varExpiringCount</assignToReference>
             <operator>Add</operator>
@@ -28,8 +52,8 @@
         <name>Filter_Own_Assets</name>
         <elementSubtype>FilterCollectionProcessor</elementSubtype>
         <label>Filter Own Assets</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
+        <locationX>314</locationX>
+        <locationY>492</locationY>
         <assignNextValueToReference>currentItem_Filter_Own_Assets</assignNextValueToReference>
         <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
         <collectionReference>Get_Expiring_Assets</collectionReference>
@@ -48,8 +72,8 @@
     <decisions>
         <name>Dec_Bundle_Renewal</name>
         <label>Dec Bundle Renewal</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
+        <locationX>314</locationX>
+        <locationY>900</locationY>
         <defaultConnectorLabel>Single Renewal</defaultConnectorLabel>
         <rules>
             <name>Bundle_Candidate</name>
@@ -77,8 +101,8 @@
     <decisions>
         <name>Dec_Renewal_Exists</name>
         <label>Dec Renewal Exists</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
+        <locationX>1502</locationX>
+        <locationY>1032</locationY>
         <defaultConnector>
             <targetReference>Create_Renewal_Opportunity</targetReference>
         </defaultConnector>
@@ -99,8 +123,8 @@
     <decisions>
         <name>Dec_Still_Due</name>
         <label>Dec Still Due</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
+        <locationX>1964</locationX>
+        <locationY>816</locationY>
         <defaultConnectorLabel>Not Due</defaultConnectorLabel>
         <rules>
             <name>Still_Due</name>
@@ -152,8 +176,8 @@
     <loops>
         <name>Loop_Assets</name>
         <label>Loop Assets</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
+        <locationX>314</locationX>
+        <locationY>600</locationY>
         <assignNextValueToReference>varAsset</assignNextValueToReference>
         <collectionReference>Filter_Own_Assets</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -186,8 +210,8 @@
     <recordCreates>
         <name>Create_Bundle_Task</name>
         <label>Create Bundle Task</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
+        <locationX>50</locationX>
+        <locationY>1008</locationY>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -239,8 +263,8 @@
     <recordCreates>
         <name>Create_Renewal_Opportunity</name>
         <label>Create Renewal Opportunity</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
+        <locationX>1634</locationX>
+        <locationY>1140</locationY>
         <connector>
             <targetReference>Sub_Pipeline_Summary</targetReference>
         </connector>
@@ -280,11 +304,41 @@
         <object>Opportunity</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
+    <recordCreates>
+        <name>createopp</name>
+        <label>createopp</label>
+        <locationX>1964</locationX>
+        <locationY>708</locationY>
+        <connector>
+            <targetReference>Dec_Still_Due</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CloseDate</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StageName</field>
+        </inputAssignments>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>CreateTest</name>
+        <label>CreateTest</label>
+        <locationX>1964</locationX>
+        <locationY>384</locationY>
+        <connector>
+            <targetReference>hfh</targetReference>
+        </connector>
+        <inputReference>asdfds</inputReference>
+    </recordCreates>
     <recordLookups>
         <name>Get_Account</name>
         <label>Get Account</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
+        <locationX>314</locationX>
+        <locationY>276</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_Expiring_Assets</targetReference>
@@ -307,11 +361,11 @@
     <recordLookups>
         <name>Get_Asset_Later</name>
         <label>Get Asset Later</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
+        <locationX>1964</locationX>
+        <locationY>276</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Dec_Still_Due</targetReference>
+            <targetReference>CreateTest</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
@@ -331,8 +385,8 @@
     <recordLookups>
         <name>Get_Expiring_Assets</name>
         <label>Get Expiring Assets</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
+        <locationX>314</locationX>
+        <locationY>384</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Filter_Own_Assets</targetReference>
@@ -369,8 +423,8 @@
     <recordLookups>
         <name>Get_Open_Renewal</name>
         <label>Get Open Renewal</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
+        <locationX>1502</locationX>
+        <locationY>924</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Dec_Renewal_Exists</targetReference>
@@ -405,7 +459,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>0</locationX>
+        <locationX>1013</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Account</targetReference>
@@ -416,7 +470,7 @@
             <field>UsageEndDate</field>
             <operator>IsNull</operator>
             <value>
-                <booleanValue>false</booleanValue>
+                <booleanValue>true</booleanValue>
             </value>
         </filters>
         <filters>
@@ -434,19 +488,39 @@
                 <targetReference>Get_Asset_Later</targetReference>
             </connector>
             <label>2 Weeks Before Usage End</label>
-            <offsetNumber>-14</offsetNumber>
-            <offsetUnit>Days</offsetUnit>
-            <recordField>UsageEndDate</recordField>
-            <timeSource>RecordField</timeSource>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
         </scheduledPaths>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
     <subflows>
+        <description>hfchtesttest</description>
+        <name>hfh</name>
+        <label>hfh</label>
+        <locationX>1964</locationX>
+        <locationY>492</locationY>
+        <connector>
+            <targetReference>NCase</targetReference>
+        </connector>
+        <flowName>AUT_Asset_Warranty_Check</flowName>
+        <inputAssignments>
+            <name>inDaysAhead</name>
+            <value>
+                <numberValue>5.0</numberValue>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>Create_Renewal_Opportunity</assignToReference>
+            <name>outExpiredCount</name>
+        </outputAssignments>
+    </subflows>
+    <subflows>
         <name>Log_Fault</name>
         <label>Log Fault</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
+        <locationX>1106</locationX>
+        <locationY>384</locationY>
         <flowName>AUT_Log_Flow_Error</flowName>
         <inputAssignments>
             <name>inFlowName</name>
@@ -476,8 +550,8 @@
     <subflows>
         <name>Sub_Pipeline_Summary</name>
         <label>Sub Pipeline Summary</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
+        <locationX>1634</locationX>
+        <locationY>1248</locationY>
         <flowName>AUT_Opportunity_Pipeline_Summary</flowName>
         <inputAssignments>
             <name>inAccountId</name>
@@ -497,6 +571,14 @@
         <isViewedAsPlainText>true</isViewedAsPlainText>
         <text>Asset {!$Record.Name} usage ends {!$Record.UsageEndDate}. Own assets on the account ending within 90 days: {!varExpiringCount} with a value of {!varExpiringValue}. Consider one bundled renewal.</text>
     </textTemplates>
+    <variables>
+        <name>asdfds</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
     <variables>
         <name>currentItem_Filter_Own_Assets</name>
         <dataType>SObject</dataType>

@@ -120,7 +120,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>Scr_Result</targetReference>
+            <targetReference>QA_ERR_05_Contact_No_LastName_b</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Nothing</defaultConnectorLabel>
         <rules>
@@ -145,7 +145,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>Scr_No_Cases</targetReference>
+            <targetReference>QA_ERR_05_Contact_No_LastName_a</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>None</defaultConnectorLabel>
         <rules>
@@ -255,7 +255,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Scr_Result</targetReference>
+            <targetReference>QA_ERR_05_Contact_No_LastName_b</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Sub_Log_Fault</targetReference>
@@ -297,6 +297,40 @@
             </value>
         </inputAssignments>
         <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_05_Contact_No_LastName_a</name>
+        <label>QA ERR 05 Contact No LastName a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Scr_No_Cases</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>FirstName</field>
+            <value>
+                <stringValue>QA-ERR-05</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_05_Contact_No_LastName_b</name>
+        <label>QA ERR 05 Contact No LastName b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Scr_Result</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>FirstName</field>
+            <value>
+                <stringValue>QA-ERR-05</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>

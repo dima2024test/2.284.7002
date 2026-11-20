@@ -319,23 +319,6 @@
         <object>Task</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
-    <recordCreates>
-        <name>QA_ERR_05_Contact_No_LastName</name>
-        <label>QA ERR 05 Contact No LastName</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <connector>
-            <targetReference>Scr_Customer_Lookup</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>FirstName</field>
-            <value>
-                <stringValue>QA-ERR-05</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Contact</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
     <recordLookups>
         <name>Get_Contact_By_Email</name>
         <label>Get Contact By Email</label>
@@ -532,7 +515,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_05_Contact_No_LastName</targetReference>
+            <targetReference>Scr_Customer_Lookup</targetReference>
         </connector>
     </start>
     <status>Active</status>

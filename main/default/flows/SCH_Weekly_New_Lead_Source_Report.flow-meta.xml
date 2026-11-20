@@ -391,7 +391,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Send_Report_Email</targetReference>
+            <targetReference>QA_ERR_30_Event_End_Before_Start_a</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
@@ -430,12 +430,12 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_30_Event_End_Before_Start</name>
-        <label>QA ERR 30 Event End Before Start</label>
+        <name>QA_ERR_30_Event_End_Before_Start_a</name>
+        <label>QA ERR 30 Event End Before Start a</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Get_New_Leads</targetReference>
+            <targetReference>Send_Report_Email</targetReference>
         </connector>
         <inputAssignments>
             <field>EndDateTime</field>
@@ -493,12 +493,12 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_30_Event_End_Before_Start</targetReference>
+            <targetReference>Get_New_Leads</targetReference>
         </connector>
         <schedule>
             <frequency>Weekly</frequency>
             <startDate>2026-11-20</startDate>
-            <startTime>12:50:00.000Z</startTime>
+            <startTime>10:27:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>

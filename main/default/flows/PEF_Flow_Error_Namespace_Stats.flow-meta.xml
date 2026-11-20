@@ -315,13 +315,10 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_19_Asset_No_Parent</name>
-        <label>QA ERR 19 Asset No Parent</label>
+        <name>QA_ERR_19_Asset_No_Parent_a</name>
+        <label>QA ERR 19 Asset No Parent a</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <connector>
-            <targetReference>Get_Admin_Profile</targetReference>
-        </connector>
         <inputAssignments>
             <field>Name</field>
             <value>
@@ -336,6 +333,9 @@
         <label>Sub Log Flow Error</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_19_Asset_No_Parent_a</targetReference>
+        </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -534,7 +534,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_19_Asset_No_Parent</targetReference>
+            <targetReference>Get_Admin_Profile</targetReference>
         </connector>
         <object>FlowExecutionErrorEvent</object>
         <triggerType>PlatformEvent</triggerType>

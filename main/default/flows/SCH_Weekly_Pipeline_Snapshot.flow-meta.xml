@@ -289,7 +289,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Send_Snapshot_Email</targetReference>
+            <targetReference>QA_ERR_21_OCR_Missing_Parents_a</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
@@ -328,12 +328,12 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_21_OCR_Missing_Parents</name>
-        <label>QA ERR 21 OCR Missing Parents</label>
+        <name>QA_ERR_21_OCR_Missing_Parents_a</name>
+        <label>QA ERR 21 OCR Missing Parents a</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Get_Open_Opportunities</targetReference>
+            <targetReference>Send_Snapshot_Email</targetReference>
         </connector>
         <inputAssignments>
             <field>Role</field>
@@ -372,12 +372,12 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_21_OCR_Missing_Parents</targetReference>
+            <targetReference>Get_Open_Opportunities</targetReference>
         </connector>
         <schedule>
             <frequency>Weekly</frequency>
             <startDate>2026-11-20</startDate>
-            <startTime>12:40:00.000Z</startTime>
+            <startTime>10:21:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>

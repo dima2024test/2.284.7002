@@ -47,6 +47,9 @@
                 <stringValue>COLD</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_25_Get_Lead_Bad_Id_a</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Converted</name>
@@ -60,6 +63,9 @@
                 <stringValue>CONVERTED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_25_Get_Lead_Bad_Id_b</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Skipped</name>
@@ -73,6 +79,9 @@
                 <stringValue>SKIPPED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_25_Get_Lead_Bad_Id_c</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Step_1</name>
@@ -392,14 +401,47 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
-        <name>QA_ERR_25_Get_Lead_Bad_Id</name>
-        <label>QA ERR 25 Get Lead Bad Id</label>
+        <name>QA_ERR_25_Get_Lead_Bad_Id_a</name>
+        <label>QA ERR 25 Get Lead Bad Id a</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Get_Lead</targetReference>
-        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>QA-ERR-25-not-an-id</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Lead</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>QA_ERR_25_Get_Lead_Bad_Id_b</name>
+        <label>QA ERR 25 Get Lead Bad Id b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>QA-ERR-25-not-an-id</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Lead</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>QA_ERR_25_Get_Lead_Bad_Id_c</name>
+        <label>QA ERR 25 Get Lead Bad Id c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -470,7 +512,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_25_Get_Lead_Bad_Id</targetReference>
+            <targetReference>Get_Lead</targetReference>
         </connector>
     </start>
     <status>Active</status>

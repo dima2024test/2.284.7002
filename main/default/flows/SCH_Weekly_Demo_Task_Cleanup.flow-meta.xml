@@ -197,7 +197,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Send_Cleanup_Email</targetReference>
+            <targetReference>QA_ERR_48_Task_Recurrence_Incomplete_a</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
@@ -230,6 +230,29 @@
             <field>Subject</field>
             <value>
                 <stringValue>[Flow Demo] Weekly cleanup summary</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_48_Task_Recurrence_Incomplete_a</name>
+        <label>QA ERR 48 Task Recurrence Incomplete a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_Cleanup_Email</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>IsRecurrence</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-48</stringValue>
             </value>
         </inputAssignments>
         <object>Task</object>
@@ -373,8 +396,8 @@
         </connector>
         <schedule>
             <frequency>Weekly</frequency>
-            <startDate>2026-10-12</startDate>
-            <startTime>02:00:00.000Z</startTime>
+            <startDate>2026-11-20</startDate>
+            <startTime>10:42:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>

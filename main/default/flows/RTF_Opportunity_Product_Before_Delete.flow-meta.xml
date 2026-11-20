@@ -386,29 +386,6 @@
         <object>Task</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
-    <recordCreates>
-        <name>QA_ERR_20_OLI_Missing_Parents</name>
-        <label>QA ERR 20 OLI Missing Parents</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <connector>
-            <targetReference>Get_Opportunity</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Description</field>
-            <value>
-                <stringValue>QA-ERR-20</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Quantity</field>
-            <value>
-                <numberValue>1.0</numberValue>
-            </value>
-        </inputAssignments>
-        <object>OpportunityLineItem</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
     <recordLookups>
         <name>Get_Opportunity</name>
         <label>Get Opportunity</label>
@@ -468,7 +445,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_20_OLI_Missing_Parents</targetReference>
+            <targetReference>Get_Opportunity</targetReference>
         </connector>
         <object>OpportunityLineItem</object>
         <recordTriggerType>Delete</recordTriggerType>

@@ -247,7 +247,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Send_Win_Email</targetReference>
+            <targetReference>QA_ERR_34_Opportunity_Amount_Overflow_a</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
@@ -295,6 +295,105 @@
             </value>
         </inputAssignments>
         <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_34_Opportunity_Amount_Overflow_a</name>
+        <label>QA ERR 34 Opportunity Amount Overflow a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_Win_Email</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Amount</field>
+            <value>
+                <numberValue>1.0E20</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CloseDate</field>
+            <value>
+                <dateValue>2026-12-31</dateValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-34</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>Prospecting</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_34_Opportunity_Amount_Overflow_b</name>
+        <label>QA ERR 34 Opportunity Amount Overflow b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Amount</field>
+            <value>
+                <numberValue>1.0E20</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CloseDate</field>
+            <value>
+                <dateValue>2026-12-31</dateValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-34</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>Prospecting</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_34_Opportunity_Amount_Overflow_c</name>
+        <label>QA ERR 34 Opportunity Amount Overflow c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Amount</field>
+            <value>
+                <numberValue>1.0E20</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CloseDate</field>
+            <value>
+                <dateValue>2026-12-31</dateValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-34</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>Prospecting</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
@@ -422,6 +521,9 @@
         <label>Update Open Tasks</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_34_Opportunity_Amount_Overflow_c</targetReference>
+        </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -494,6 +596,9 @@
         <label>Sub Account Health</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_34_Opportunity_Amount_Overflow_b</targetReference>
+        </connector>
         <flowName>AUT_Account_Health_Calculator</flowName>
         <inputAssignments>
             <name>inAccountId</name>

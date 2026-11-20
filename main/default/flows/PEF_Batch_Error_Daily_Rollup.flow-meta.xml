@@ -276,10 +276,39 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
+        <name>QA_ERR_59_Lead_Bad_Owner_a</name>
+        <label>QA ERR 59 Lead Bad Owner a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Company</field>
+            <value>
+                <stringValue>QA-ERR-59</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <stringValue>QA-ERR-59</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>005000000000000AAB</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
         <name>Sub_Log_Error</name>
         <label>Sub Log Error</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_59_Lead_Bad_Owner_a</targetReference>
+        </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>

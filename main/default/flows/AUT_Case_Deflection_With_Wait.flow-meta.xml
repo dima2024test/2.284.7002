@@ -29,6 +29,9 @@
                 <stringValue>DEFLECTED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_12_Case_Wrong_Account_Type_a</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Not_Deflected</name>
@@ -42,6 +45,9 @@
                 <stringValue>NOT_DEFLECTED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_12_Case_Wrong_Account_Type_b</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Similar_Count</name>
@@ -71,6 +77,9 @@
                 <stringValue>SKIPPED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_12_Case_Wrong_Account_Type_c</targetReference>
+        </connector>
     </assignments>
     <collectionProcessors>
         <name>Sort_Recent_Five</name>
@@ -281,6 +290,66 @@
             </value>
         </inputAssignments>
         <object>Task</object>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_12_Case_Wrong_Account_Type_a</name>
+        <label>QA ERR 12 Case Wrong Account Type a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <stringValue>003000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-12</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_12_Case_Wrong_Account_Type_b</name>
+        <label>QA ERR 12 Case Wrong Account Type b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <stringValue>003000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-12</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_12_Case_Wrong_Account_Type_c</name>
+        <label>QA ERR 12 Case Wrong Account Type c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <stringValue>003000000000000AAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-12</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordDeletes>
         <name>Delete_Suggestion_Task</name>

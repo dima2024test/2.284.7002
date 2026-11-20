@@ -270,7 +270,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Send_Summary_Email</targetReference>
+            <targetReference>QA_ERR_23_PBE_Missing_Parents_a</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
@@ -309,12 +309,12 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_23_PBE_Missing_Parents</name>
-        <label>QA ERR 23 PBE Missing Parents</label>
+        <name>QA_ERR_23_PBE_Missing_Parents_a</name>
+        <label>QA ERR 23 PBE Missing Parents a</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Get_Draft_Contracts</targetReference>
+            <targetReference>Send_Summary_Email</targetReference>
         </connector>
         <inputAssignments>
             <field>UnitPrice</field>
@@ -362,12 +362,12 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_23_PBE_Missing_Parents</targetReference>
+            <targetReference>Get_Draft_Contracts</targetReference>
         </connector>
         <schedule>
             <frequency>Once</frequency>
             <startDate>2026-11-20</startDate>
-            <startTime>12:55:00.000Z</startTime>
+            <startTime>10:30:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>

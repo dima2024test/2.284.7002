@@ -22,6 +22,9 @@
         <label>Dec All Done</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_57_Asset_Bad_Contact_b</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Still Open</defaultConnectorLabel>
         <rules>
             <name>All_Done</name>
@@ -44,6 +47,9 @@
         <label>Dec Case New</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_57_Asset_Bad_Contact_c</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Already Progressed</defaultConnectorLabel>
         <rules>
             <name>Case_New</name>
@@ -80,6 +86,9 @@
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
+            <connector>
+                <targetReference>QA_ERR_57_Asset_Bad_Contact_d</targetReference>
+            </connector>
             <label>Exists</label>
         </rules>
     </decisions>
@@ -88,6 +97,9 @@
         <label>Dec Opp Open</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_57_Asset_Bad_Contact_e</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Closed</defaultConnectorLabel>
         <rules>
             <name>Open</name>
@@ -117,6 +129,9 @@
         <label>Dec Related Type</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_57_Asset_Bad_Contact_f</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Other</defaultConnectorLabel>
         <rules>
             <name>Opportunity_Task</name>
@@ -225,6 +240,9 @@
         <label>Create Next Step Task</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_57_Asset_Bad_Contact_a</targetReference>
+        </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -271,6 +289,146 @@
             </value>
         </inputAssignments>
         <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_57_Asset_Bad_Contact_a</name>
+        <label>QA ERR 57 Asset Bad Contact a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <stringValue>003000000000000AAE</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-57</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Asset</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_57_Asset_Bad_Contact_b</name>
+        <label>QA ERR 57 Asset Bad Contact b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <stringValue>003000000000000AAE</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-57</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Asset</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_57_Asset_Bad_Contact_c</name>
+        <label>QA ERR 57 Asset Bad Contact c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <stringValue>003000000000000AAE</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-57</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Asset</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_57_Asset_Bad_Contact_d</name>
+        <label>QA ERR 57 Asset Bad Contact d</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <stringValue>003000000000000AAE</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-57</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Asset</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_57_Asset_Bad_Contact_e</name>
+        <label>QA ERR 57 Asset Bad Contact e</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <stringValue>003000000000000AAE</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-57</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Asset</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_57_Asset_Bad_Contact_f</name>
+        <label>QA ERR 57 Asset Bad Contact f</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <stringValue>003000000000000AAE</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-57</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Asset</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_57_Asset_Bad_Contact_g</name>
+        <label>QA ERR 57 Asset Bad Contact g</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <stringValue>003000000000000AAE</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-57</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Asset</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
@@ -402,6 +560,9 @@
         <label>Update Case Working</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_57_Asset_Bad_Contact_g</targetReference>
+        </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>

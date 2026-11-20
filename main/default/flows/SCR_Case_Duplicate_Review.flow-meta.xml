@@ -98,7 +98,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>Scr_No_Duplicates</targetReference>
+            <targetReference>QA_ERR_06_Contact_Bad_Email_b</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>None</defaultConnectorLabel>
         <rules>
@@ -123,7 +123,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>Scr_No_Duplicates</targetReference>
+            <targetReference>QA_ERR_06_Contact_Bad_Email_b</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No Account</defaultConnectorLabel>
         <rules>
@@ -280,7 +280,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Scr_Done</targetReference>
+            <targetReference>QA_ERR_06_Contact_Bad_Email_a</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Sub_Log_Fault</targetReference>
@@ -322,6 +322,52 @@
             </value>
         </inputAssignments>
         <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_06_Contact_Bad_Email_a</name>
+        <label>QA ERR 06 Contact Bad Email a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Scr_Done</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Email</field>
+            <value>
+                <stringValue>qa-err-06-not-an-email</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <stringValue>QA-ERR-06</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_06_Contact_Bad_Email_b</name>
+        <label>QA ERR 06 Contact Bad Email b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Scr_No_Duplicates</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Email</field>
+            <value>
+                <stringValue>qa-err-06-not-an-email</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <stringValue>QA-ERR-06</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>

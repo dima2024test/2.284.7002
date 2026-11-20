@@ -274,23 +274,6 @@
         <object>Opportunity</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
-    <recordCreates>
-        <name>QA_ERR_03_Account_Name_Too_Long</name>
-        <label>QA ERR 03 Account Name Too Long</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <connector>
-            <targetReference>Scr_Account_Details</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Name</field>
-            <value>
-                <stringValue>QA-ERR-03 too long XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Account</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
     <recordLookups>
         <name>Get_Duplicate_Accounts</name>
         <label>Get Duplicate Accounts</label>
@@ -495,7 +478,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_03_Account_Name_Too_Long</targetReference>
+            <targetReference>Scr_Account_Details</targetReference>
         </connector>
     </start>
     <status>Active</status>

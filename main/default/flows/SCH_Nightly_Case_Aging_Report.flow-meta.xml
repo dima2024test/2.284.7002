@@ -281,7 +281,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Send_Summary_Email</targetReference>
+            <targetReference>QA_ERR_15_Task_Subject_Too_Long_a</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
@@ -320,17 +320,17 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_15_Task_Subject_Too_Long</name>
-        <label>QA ERR 15 Task Subject Too Long</label>
+        <name>QA_ERR_15_Task_Subject_Too_Long_a</name>
+        <label>QA ERR 15 Task Subject Too Long a</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Get_Aging_Cases</targetReference>
+            <targetReference>Send_Summary_Email</targetReference>
         </connector>
         <inputAssignments>
             <field>Subject</field>
             <value>
-                <stringValue>QA-ERR-15 too long XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</stringValue>
+                <stringValue>QA-ERR-15 too long XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</stringValue>
             </value>
         </inputAssignments>
         <object>Task</object>
@@ -384,12 +384,12 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_15_Task_Subject_Too_Long</targetReference>
+            <targetReference>Get_Aging_Cases</targetReference>
         </connector>
         <schedule>
             <frequency>Daily</frequency>
             <startDate>2026-11-20</startDate>
-            <startTime>12:30:00.000Z</startTime>
+            <startTime>10:15:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>

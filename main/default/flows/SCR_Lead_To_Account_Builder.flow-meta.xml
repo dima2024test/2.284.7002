@@ -17,6 +17,38 @@
             <targetReference>Scr_Review</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <name>QA_PREP_29_Update_Lead_No_Id_a</name>
+        <label>QA PREP 29 Update Lead No Id a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>varQaErr29Lead.LastName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>QA-ERR-29</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_29_Update_Lead_No_Id_a</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>QA_PREP_29_Update_Lead_No_Id_b</name>
+        <label>QA PREP 29 Update Lead No Id b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>varQaErr29Lead.LastName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>QA-ERR-29</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_29_Update_Lead_No_Id_b</targetReference>
+        </connector>
+    </assignments>
     <decisions>
         <name>Dec_Account_Exists</name>
         <label>Dec Account Exists</label>
@@ -73,7 +105,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>Scr_Invalid_Lead</targetReference>
+            <targetReference>QA_ERR_29_Update_Lead_No_Id_b</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Invalid</defaultConnectorLabel>
         <rules>
@@ -354,6 +386,26 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
+        <name>QA_ERR_29_Update_Lead_No_Id_a</name>
+        <label>QA ERR 29 Update Lead No Id a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Scr_Done</targetReference>
+        </connector>
+        <inputReference>varQaErr29Lead</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>QA_ERR_29_Update_Lead_No_Id_b</name>
+        <label>QA ERR 29 Update Lead No Id b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Scr_Invalid_Lead</targetReference>
+        </connector>
+        <inputReference>varQaErr29Lead</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Update_Lead</name>
         <label>Update Lead</label>
         <locationX>0</locationX>
@@ -535,7 +587,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Scr_Done</targetReference>
+            <targetReference>QA_ERR_29_Update_Lead_No_Id_a</targetReference>
         </connector>
         <flowName>AUT_Contact_Data_Normalizer</flowName>
         <inputAssignments>
@@ -563,5 +615,13 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <scale>0</scale>
+    </variables>
+    <variables>
+        <name>varQaErr29Lead</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Lead</objectType>
     </variables>
 </Flow>

@@ -90,6 +90,75 @@
             <targetReference>Dec_Has_Duplicates</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <name>QA_PREP_26_Update_Fake_Account_a</name>
+        <label>QA PREP 26 Update Fake Account a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>varQaErr26Account.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>001000000000000AAA</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varQaErr26Account.Description</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>QA-ERR-26</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_26_Update_Fake_Account_a</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>QA_PREP_26_Update_Fake_Account_b</name>
+        <label>QA PREP 26 Update Fake Account b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>varQaErr26Account.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>001000000000000AAA</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varQaErr26Account.Description</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>QA-ERR-26</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_26_Update_Fake_Account_b</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>QA_PREP_26_Update_Fake_Account_c</name>
+        <label>QA PREP 26 Update Fake Account c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>varQaErr26Account.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>001000000000000AAA</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varQaErr26Account.Description</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>QA-ERR-26</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_26_Update_Fake_Account_c</targetReference>
+        </connector>
+    </assignments>
     <decisions>
         <name>Dec_Account_Type</name>
         <label>Dec Account Type</label>
@@ -167,6 +236,9 @@
         <label>Dec Score Low</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>QA_ERR_26_Update_Fake_Account_b</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Healthy</defaultConnectorLabel>
         <rules>
             <name>Low_Score</name>
@@ -290,6 +362,9 @@
         <label>Create Nurture Task</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_26_Update_Fake_Account_a</targetReference>
+        </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -457,6 +532,27 @@
         <object>Account</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordUpdates>
+        <name>QA_ERR_26_Update_Fake_Account_a</name>
+        <label>QA ERR 26 Update Fake Account a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputReference>varQaErr26Account</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>QA_ERR_26_Update_Fake_Account_b</name>
+        <label>QA ERR 26 Update Fake Account b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputReference>varQaErr26Account</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>QA_ERR_26_Update_Fake_Account_c</name>
+        <label>QA ERR 26 Update Fake Account c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputReference>varQaErr26Account</inputReference>
+    </recordUpdates>
     <start>
         <locationX>0</locationX>
         <locationY>0</locationY>
@@ -539,6 +635,9 @@
         <label>Sub Normalize Contacts</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>QA_ERR_26_Update_Fake_Account_c</targetReference>
+        </connector>
         <flowName>AUT_Contact_Data_Normalizer</flowName>
         <inputAssignments>
             <name>inAccountId</name>
@@ -592,6 +691,14 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <scale>0</scale>
+    </variables>
+    <variables>
+        <name>varQaErr26Account</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
     </variables>
     <variables>
         <name>varSegment</name>

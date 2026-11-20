@@ -47,6 +47,9 @@
                 <stringValue>ACTIVATED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_18_Contract_No_Account_a</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Build_Task</name>
@@ -164,6 +167,9 @@
                 <stringValue>PENDING</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_18_Contract_No_Account_b</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Skipped</name>
@@ -177,6 +183,9 @@
                 <stringValue>SKIPPED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_18_Contract_No_Account_c</targetReference>
+        </connector>
     </assignments>
     <decisions>
         <name>Dec_All_Done</name>
@@ -341,13 +350,50 @@
         <inputReference>colNewTasks</inputReference>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_18_Contract_No_Account</name>
-        <label>QA ERR 18 Contract No Account</label>
+        <name>QA_ERR_18_Contract_No_Account_a</name>
+        <label>QA ERR 18 Contract No Account a</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <connector>
-            <targetReference>Get_Contract</targetReference>
-        </connector>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>QA-ERR-18</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Draft</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Contract</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_18_Contract_No_Account_b</name>
+        <label>QA ERR 18 Contract No Account b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>QA-ERR-18</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Draft</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Contract</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_18_Contract_No_Account_c</name>
+        <label>QA ERR 18 Contract No Account c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <inputAssignments>
             <field>Description</field>
             <value>
@@ -456,7 +502,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_18_Contract_No_Account</targetReference>
+            <targetReference>Get_Contract</targetReference>
         </connector>
     </start>
     <status>Active</status>

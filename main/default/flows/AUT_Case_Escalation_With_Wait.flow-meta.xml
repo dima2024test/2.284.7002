@@ -132,6 +132,9 @@
                 <stringValue>ESCALATED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_51_Event_Negative_Duration_a</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Result_Resolved</name>
@@ -145,6 +148,9 @@
                 <stringValue>RESOLVED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_51_Event_Negative_Duration_b</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Asg_Result_Skipped</name>
@@ -158,6 +164,9 @@
                 <stringValue>SKIPPED</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>QA_ERR_51_Event_Negative_Duration_c</targetReference>
+        </connector>
     </assignments>
     <decisions>
         <name>Dec_Case_Open</name>
@@ -349,26 +358,81 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>QA_ERR_12_Case_Wrong_Account_Type</name>
-        <label>QA ERR 12 Case Wrong Account Type</label>
+        <name>QA_ERR_51_Event_Negative_Duration_a</name>
+        <label>QA ERR 51 Event Negative Duration a</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <connector>
-            <targetReference>Get_Case</targetReference>
-        </connector>
         <inputAssignments>
-            <field>AccountId</field>
+            <field>DurationInMinutes</field>
             <value>
-                <stringValue>003000000000000AAA</stringValue>
+                <numberValue>-10.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDateTime</field>
+            <value>
+                <dateTimeValue>2026-12-01T10:00:00.000Z</dateTimeValue>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Subject</field>
             <value>
-                <stringValue>QA-ERR-12</stringValue>
+                <stringValue>QA-ERR-51</stringValue>
             </value>
         </inputAssignments>
-        <object>Case</object>
+        <object>Event</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_51_Event_Negative_Duration_b</name>
+        <label>QA ERR 51 Event Negative Duration b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>DurationInMinutes</field>
+            <value>
+                <numberValue>-10.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDateTime</field>
+            <value>
+                <dateTimeValue>2026-12-01T10:00:00.000Z</dateTimeValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-51</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Event</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_51_Event_Negative_Duration_c</name>
+        <label>QA ERR 51 Event Negative Duration c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>DurationInMinutes</field>
+            <value>
+                <numberValue>-10.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDateTime</field>
+            <value>
+                <dateTimeValue>2026-12-01T10:00:00.000Z</dateTimeValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>QA-ERR-51</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Event</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
@@ -481,7 +545,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_12_Case_Wrong_Account_Type</targetReference>
+            <targetReference>Get_Case</targetReference>
         </connector>
     </start>
     <status>Active</status>

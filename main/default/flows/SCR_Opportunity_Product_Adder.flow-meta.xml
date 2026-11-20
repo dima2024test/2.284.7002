@@ -62,7 +62,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>Scr_Not_Priced</targetReference>
+            <targetReference>QA_ERR_52_Account_Phone_Too_Long_b</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Not Priced</defaultConnectorLabel>
         <rules>
@@ -137,7 +137,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>Scr_Not_Priced</targetReference>
+            <targetReference>QA_ERR_52_Account_Phone_Too_Long_b</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Missing</defaultConnectorLabel>
         <rules>
@@ -247,7 +247,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Scr_Done</targetReference>
+            <targetReference>QA_ERR_52_Account_Phone_Too_Long_a</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Sub_Log_Fault</targetReference>
@@ -289,6 +289,52 @@
             </value>
         </inputAssignments>
         <object>OpportunityLineItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_52_Account_Phone_Too_Long_a</name>
+        <label>QA ERR 52 Account Phone Too Long a</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Scr_Done</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-52</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <stringValue>55555555555555555555555555555555555555555555555555</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>QA_ERR_52_Account_Phone_Too_Long_b</name>
+        <label>QA ERR 52 Account Phone Too Long b</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Scr_Not_Priced</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>QA-ERR-52</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <stringValue>55555555555555555555555555555555555555555555555555</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
@@ -416,7 +462,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Scr_Done</targetReference>
+            <targetReference>QA_ERR_52_Account_Phone_Too_Long_a</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Sub_Log_Fault</targetReference>

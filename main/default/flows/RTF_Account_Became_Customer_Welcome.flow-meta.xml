@@ -104,29 +104,6 @@
             <targetReference>Loop_Contacts</targetReference>
         </connector>
     </assignments>
-    <assignments>
-        <name>QA_ERR_26_Prepare_Fake_Account</name>
-        <label>QA ERR 26 Prepare Fake Account</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>varQaErr26Account.Id</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>001000000000000AAA</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>varQaErr26Account.Description</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>QA-ERR-26</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>QA_ERR_26_Update_Fake_Account</targetReference>
-        </connector>
-    </assignments>
     <collectionProcessors>
         <name>Sort_Contacts</name>
         <elementSubtype>SortCollectionProcessor</elementSubtype>
@@ -422,21 +399,11 @@
         <object>Contact</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <recordUpdates>
-        <name>QA_ERR_26_Update_Fake_Account</name>
-        <label>QA ERR 26 Update Fake Account</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <connector>
-            <targetReference>Dec_Previous_Type</targetReference>
-        </connector>
-        <inputReference>varQaErr26Account</inputReference>
-    </recordUpdates>
     <start>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_26_Prepare_Fake_Account</targetReference>
+            <targetReference>Dec_Previous_Type</targetReference>
         </connector>
         <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>or</filterLogic>
@@ -582,14 +549,6 @@
         <value>
             <numberValue>0.0</numberValue>
         </value>
-    </variables>
-    <variables>
-        <name>varQaErr26Account</name>
-        <dataType>SObject</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <objectType>Account</objectType>
     </variables>
     <variables>
         <name>varTask</name>
