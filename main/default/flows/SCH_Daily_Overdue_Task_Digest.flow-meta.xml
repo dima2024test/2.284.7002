@@ -157,7 +157,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>QA_ERR_27_Delete_Fake_Task_a</targetReference>
+            <targetReference>QA_PREP_27_Delete_Fake_Task_a</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Nothing Overdue</defaultConnectorLabel>
         <rules>
@@ -286,7 +286,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_27_Delete_Fake_Task_b</targetReference>
+            <targetReference>QA_PREP_27_Delete_Fake_Task_b</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
@@ -394,7 +394,7 @@
         <schedule>
             <frequency>Daily</frequency>
             <startDate>2026-11-20</startDate>
-            <startTime>10:18:00.000Z</startTime>
+            <startTime>10:48:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>
