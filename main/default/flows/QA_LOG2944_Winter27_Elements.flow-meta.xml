@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>68.0</apiVersion>
+    <assignments>
+        <name>Asg_Init</name>
+        <label>Asg Init</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>varStep</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>init</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Asg_Prepare</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Asg_Prepare</name>
+        <label>Asg Prepare</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>varStep</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>prepared</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Split_By_Date</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Split_By_Date</name>
+        <elementSubtype>SplitPathByDate</elementSubtype>
+        <label>Split By Date</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Path</defaultConnectorLabel>
+        <rules>
+            <name>Before_2026</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Flow.CurrentDate</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <dateValue>2026-01-01</dateValue>
+                </rightValue>
+            </conditions>
+            <label>Before 2026-01-01</label>
+        </rules>
+        <rules>
+            <name>On_Or_After_Nov_2026</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Flow.CurrentDate</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <dateValue>2026-10-31</dateValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Split_By_Field</targetReference>
+            </connector>
+            <label>After 2026-10-31</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Split_By_Field</name>
+        <elementSubtype>SplitPathByField</elementSubtype>
+        <label>Split By Field</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Path</defaultConnectorLabel>
+        <rules>
+            <name>User_Active</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$User.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Bad_Account</targetReference>
+            </connector>
+            <label>User Is Active</label>
+        </rules>
+    </decisions>
+    <interviewLabel>QA LOG-2944 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>QA LOG-2944 Winter27 Elements</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Bad_Account</name>
+        <label>Create Bad Account (QA-ERR-2944)</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>QA-ERR-2944: no Name</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Asg_Init</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>varStep</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

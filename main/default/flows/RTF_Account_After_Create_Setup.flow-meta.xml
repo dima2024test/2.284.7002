@@ -237,7 +237,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>QA_ERR_26_Update_Fake_Account_b</targetReference>
+            <targetReference>QA_PREP_26_Update_Fake_Account_b</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Healthy</defaultConnectorLabel>
         <rules>
@@ -363,7 +363,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_26_Update_Fake_Account_a</targetReference>
+            <targetReference>QA_PREP_26_Update_Fake_Account_a</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
@@ -636,7 +636,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>QA_ERR_26_Update_Fake_Account_c</targetReference>
+            <targetReference>QA_PREP_26_Update_Fake_Account_c</targetReference>
         </connector>
         <flowName>AUT_Contact_Data_Normalizer</flowName>
         <inputAssignments>
